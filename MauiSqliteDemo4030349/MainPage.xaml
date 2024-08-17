@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSqliteDemo4030349.MainPage">
+
+    <ScrollView>
+        <FlexLayout Direction="Column">
+            <VerticalStackLayout Padding="15" FlexLayout.Basis="Auto" BackgroundColor="Beige">
+                <Entry x:Name="nombreEntryField" Placeholder="Nombre"/>
+                <Entry x:Name="emailEntryField" Placeholder="Email"/>
+                <Entry x:Name="movilEntryField" Placeholder="Movil"/>
+                <Button x:Name="SaveButton" Text="Guardar" Clicked="SaveButton_Clicked"/>
+            </VerticalStackLayout>
+            <ListView x:Name="listview" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="Listview_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Padding="5">
+                                <Label Text="{Binding NombreCliente}" FontSize="17" FontAttributes="Bold"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Email}"/>
+                                    <Label Grid.Column="2" Text="{Binding Movil}" FontAttributes="Bold"/>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </FlexLayout>    
+        
+    </ScrollView>
+
+</ContentPage>
