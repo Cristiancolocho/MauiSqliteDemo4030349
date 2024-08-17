@@ -9,7 +9,7 @@
                 <Entry x:Name="nombreEntryField" Placeholder="Nombre"/>
                 <Entry x:Name="emailEntryField" Placeholder="Email"/>
                 <Entry x:Name="movilEntryField" Placeholder="Movil"/>
-                <Button x:Name="SaveButton" Text="Guardar" Clicked="SaveButton_Clicked"/>
+                <Button x:Name="SaveButton" Text="Guardar" Clicked="SaveButton_Clicked" BackgroundColor="Purple" TextColor="White"/>
             </VerticalStackLayout>
             <ListView x:Name="listview" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="Listview_ItemTapped">
                 <ListView.ItemTemplate>
